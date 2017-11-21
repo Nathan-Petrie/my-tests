@@ -1,6 +1,8 @@
 package org.usfirst.frc.team4610.robot;
 
 
+import org.usfirst.frc.team4610.robot.commands.FastGear;
+import org.usfirst.frc.team4610.robot.commands.LowGear;
 import org.usfirst.frc.team4610.robot.commands.omniDown;
 import org.usfirst.frc.team4610.robot.commands.omniUp;
 
@@ -18,7 +20,8 @@ public class OI {
 	public OI() {
 		new JoystickButton(joy, 5).whenPressed(new omniDown());
 		new JoystickButton(joy, 6).whenPressed(new omniUp());
-
+		new JoystickButton(joy, 7).whenPressed(new FastGear());
+		new JoystickButton(joy, 8).whenPressed(new LowGear());
 	}	
 
 	public Joystick getJoystick() {

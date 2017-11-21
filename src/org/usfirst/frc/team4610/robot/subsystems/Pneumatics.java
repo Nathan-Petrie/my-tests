@@ -9,9 +9,6 @@ import org.usfirst.frc.team4610.robot.Robot;
 
 /**
  * The Pneumatics subsystem contains the compressor and a pressure sensor.
- *
- * NOTE: The simulator currently doesn't support the compressor or pressure
- * sensors.
  */
 public class Pneumatics extends Subsystem {
 	AnalogInput pressureSensor = new AnalogInput(3);
@@ -51,7 +48,7 @@ public class Pneumatics extends Subsystem {
 		if (Robot.isReal()) {
 			return kMaxPressure <= pressureSensor.getVoltage();
 		} else {
-			return true; // NOTE: Simulation always has full pressure
+			return true; 
 		}
 	}
 

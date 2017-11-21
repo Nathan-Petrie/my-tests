@@ -12,17 +12,14 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team4610.robot.commands.TankDriveWithJoystick;
 
 /**
- * The DriveTrain subsystem incorporates the sensors and actuators attached to
- * the robots chassis. These include four drive motors, a left and right encoder
- * and a gyro.
+ * The DriveTrain subsystem incorporates the actuators attached to
+ * the robots chassis. These include 6 drive motors
  */
 public class DriveTrain extends Subsystem {
 	private SpeedController frontLeftMotor = new Talon(1);
 	private SpeedController rearLeftMotor = new Talon(2);
-	private SpeedController topLeftMotor = new Talon(3);
 	private SpeedController frontRightMotor = new Talon(4);
 	private SpeedController rearRightMotor = new Talon(5);
-	private SpeedController topRightMotor = new Talon(6);
 	
 
 	private RobotDrive drive = new RobotDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
@@ -41,10 +38,8 @@ public class DriveTrain extends Subsystem {
 		// Let's show everything on the LiveWindow
 		LiveWindow.addActuator("Drive Train", "Front_Left Motor", (Talon) frontLeftMotor);
 		LiveWindow.addActuator("Drive Train", "Back Left Motor", (Talon) rearLeftMotor);
-		LiveWindow.addActuator("Drive Train", "Top Left motor", (Talon) topLeftMotor);
 		LiveWindow.addActuator("Drive Train", "Front Right Motor", (Talon) frontRightMotor);
 		LiveWindow.addActuator("Drive Train", "Back Right Motor", (Talon) rearRightMotor);
-		LiveWindow.addActuator("Drive Train", "Top Right motor", (Talon) topRightMotor);
 		
 	}
 

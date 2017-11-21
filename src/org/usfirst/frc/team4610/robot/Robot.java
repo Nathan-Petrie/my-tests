@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import org.usfirst.frc.team4610.robot.subsystems.DogShifter;
 import org.usfirst.frc.team4610.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team4610.robot.subsystems.OmniShifter;
 import org.usfirst.frc.team4610.robot.subsystems.Pneumatics;
@@ -17,10 +19,11 @@ import org.usfirst.frc.team4610.robot.subsystems.Pneumatics;
  */
 public class Robot extends IterativeRobot {
 	Command autonomousCommand;
-
+	// list of subsystems 
 	public static DriveTrain drivetrain;
 	public static Pneumatics pneumatics = new Pneumatics();
 	public static OmniShifter omniShifter;
+	public static DogShifter dogShifter;
 	public static OI oi;
 
 	/**
